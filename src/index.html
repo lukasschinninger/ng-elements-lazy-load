@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<script>
+
+    window.addEventListener('load', function () {
+        var elButton = document.getElementById('elButton');
+
+        elButton.addEventListener('click', function () {
+            elButton.setAttribute('label', 'new label');
+        });
+        elButton.addEventListener('buttonClick', function (event) {
+            alert("TEST");
+        });
+
+    });
+
+
+</script>
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Elements</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+
+<el-button id="elButton" label="test"></el-button>
+
+
+</body>
+
+</html>
+
+
+
