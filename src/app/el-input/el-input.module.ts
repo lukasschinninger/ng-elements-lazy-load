@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ElInputComponent} from './el-input.component';
-import {LazyElementModuleInterface} from '../elements-proxy/lazy-element-module.interface';
+import {LazyElementModule} from '../../../projects/ls-ng-extension/src/lib/ng-elements-proxy';
 
 
 @NgModule({
@@ -12,6 +12,6 @@ import {LazyElementModuleInterface} from '../elements-proxy/lazy-element-module.
   ],
   entryComponents: [ElInputComponent]
 })
-export class ElInputModule implements LazyElementModuleInterface {
+export class ElInputModule implements LazyElementModule {
   elementComponent = ElInputComponent;
 }

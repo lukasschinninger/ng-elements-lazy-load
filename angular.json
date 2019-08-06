@@ -126,6 +126,76 @@
           }
         }
       }
+    },
+    "ng-elements-proxy": {
+      "projectType": "library",
+      "root": "projects/ng-elements-proxy",
+      "sourceRoot": "projects/ng-elements-proxy/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-elements-proxy/tsconfig.lib.json",
+            "project": "projects/ng-elements-proxy/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-elements-proxy/src/test.ts",
+            "tsConfig": "projects/ng-elements-proxy/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-elements-proxy/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-elements-proxy/tsconfig.lib.json",
+              "projects/ng-elements-proxy/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ls-ng-extension": {
+      "projectType": "library",
+      "root": "projects/ls-ng-extension",
+      "sourceRoot": "projects/ls-ng-extension/src",
+      "prefix": "ls",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ls-ng-extension/tsconfig.lib.json",
+            "project": "projects/ls-ng-extension/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ls-ng-extension/src/test.ts",
+            "tsConfig": "projects/ls-ng-extension/tsconfig.spec.json",
+            "karmaConfig": "projects/ls-ng-extension/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ls-ng-extension/tsconfig.lib.json",
+              "projects/ls-ng-extension/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "elements"

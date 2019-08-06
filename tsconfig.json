@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ls-ng-extension": [
+        "dist/ls-ng-extension"
+      ],
+      "ls-ng-extension/*": [
+        "dist/ls-ng-extension/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

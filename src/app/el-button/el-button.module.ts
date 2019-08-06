@@ -1,8 +1,8 @@
 import {NgModule, Type} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ElButtonComponent} from './el-button.component';
-import {LazyElementModuleInterface} from '../elements-proxy/lazy-element-module.interface';
 import {ButtonModule} from 'primeng/button';
+import {LazyElementModule} from '../../../projects/ng-elements-proxy/src/lib/interfaces/lazy-element-module.interface';
 
 
 @NgModule({
@@ -14,7 +14,7 @@ import {ButtonModule} from 'primeng/button';
   ],
   entryComponents: [ElButtonComponent]
 })
-export class ElButtonModule implements LazyElementModuleInterface {
+export class ElButtonModule implements LazyElementModule {
   elementComponent = ElButtonComponent;
 
 

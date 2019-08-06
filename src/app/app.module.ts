@@ -1,8 +1,10 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {Injector, NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
-import {ElementsProxyModule} from './elements-proxy/elements-proxy.module';
-import {ElementRegistry} from './elements-proxy/elements-registry.interface';
+import {ElementRegistry} from '../../projects/ng-elements-proxy/src/lib/interfaces/elements-registry.interface';
+import {LazyElementsProxyModule} from '../../projects/ng-elements-proxy/src/lib/lazy-elements-proxy.module';
+import {LsNgExtensionModule} from '../../projects/ls-ng-extension/src/lib/ls-ng-extension.module';
+
 
 
 export function elementRegistryFactory(): ElementRegistry {
@@ -18,7 +20,8 @@ export function elementRegistryFactory(): ElementRegistry {
   ],
   imports: [
     BrowserModule,
-    ElementsProxyModule.forRoot(elementRegistryFactory)
+    LazyElementsProxyModule.forRoot(elementRegistryFactory),
+    LsNgExtensionModule
   ],
   providers: [],
   bootstrap: [],
