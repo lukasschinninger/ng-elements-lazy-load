@@ -1,9 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {Injector, NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
-import {ElementRegistry} from '../../projects/ng-elements-proxy/src/lib/interfaces/elements-registry.interface';
-import {LazyElementsProxyModule} from '../../projects/ng-elements-proxy/src/lib/lazy-elements-proxy.module';
-import {LsNgExtensionModule} from '../../projects/ls-ng-extension/src/lib/ls-ng-extension.module';
+import {ElementRegistry, LazyElementsProxyModule} from '../../projects/ls-ng-extension/src/lib/ng-elements-proxy';
 
 
 
@@ -21,7 +19,6 @@ export function elementRegistryFactory(): ElementRegistry {
   imports: [
     BrowserModule,
     LazyElementsProxyModule.forRoot(elementRegistryFactory),
-    LsNgExtensionModule
   ],
   providers: [],
   bootstrap: [],

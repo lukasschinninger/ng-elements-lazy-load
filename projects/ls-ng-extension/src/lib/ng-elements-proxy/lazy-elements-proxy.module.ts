@@ -5,6 +5,8 @@ import {createCustomElement} from '@angular/elements';
 import {ElementRegistryFactory} from './interfaces/elements-registry.interface';
 import {ELEMENT_MODULE_RESOLVER} from './tokens/element-module-resolver.token';
 import {ELEMENT_REGISTRY_FACTORY} from './tokens/element-regitstry-factory.token';
+import {ELEMENT_NAME} from './tokens/element-name.token';
+import {LazyElementsLoader} from './lazy-elements-loader.service';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ export class LazyElementsProxyModule {
         {
           provide: ELEMENT_REGISTRY_FACTORY,
           useValue: elementRegistryFactory
-        }
+        },
+        LazyElementsLoader
       ],
     };
   }
@@ -42,6 +45,10 @@ export class LazyElementsProxyModule {
             {
               provide: ELEMENT_MODULE_RESOLVER,
               useValue: elementRegistry[elementName]
+            },
+            {
+              provide: ELEMENT_NAME,
+              useValue: elementName
             }
           ]
         }

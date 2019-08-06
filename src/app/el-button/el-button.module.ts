@@ -2,7 +2,7 @@ import {NgModule, Type} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ElButtonComponent} from './el-button.component';
 import {ButtonModule} from 'primeng/button';
-import {LazyElementModule} from '../../../projects/ng-elements-proxy/src/lib/interfaces/lazy-element-module.interface';
+import {LazyElementModule} from '../../../projects/ls-ng-extension/src/lib/ng-elements-proxy';
 
 
 @NgModule({
